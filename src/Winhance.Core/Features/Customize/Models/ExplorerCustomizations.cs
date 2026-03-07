@@ -54,10 +54,10 @@ public static class ExplorerCustomizations
                         {
                             KeyPath = @"HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32",
                             ValueName = "",
-                            RecommendedValue = "",
+                            RecommendedValue = "On",
                             EnabledValue = [""],
                             DisabledValue = [null],
-                            DefaultValue = "",
+                            DefaultValue = null,
                             ValueType = RegistryValueKind.String,
                         },
                     },
@@ -76,10 +76,10 @@ public static class ExplorerCustomizations
                         {
                             KeyPath = @"HKEY_CLASSES_ROOT\*\shell\TakeOwnership",
                             ValueName = "",
-                            EnabledValue = ["Take Ownership"],
+                            EnabledValue = [""],
                             DisabledValue = [null],
                             DefaultValue = null,
-                            RecommendedValue = "Take Ownership",
+                            RecommendedValue = "On",
                             ValueType = RegistryValueKind.String,
                         }
                     },
