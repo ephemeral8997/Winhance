@@ -121,7 +121,7 @@ public partial class MoreMenuViewModel : ObservableObject, IDisposable
         try
         {
             await Windows.System.Launcher.LaunchUriAsync(
-                new Uri("https://github.com/memstechtips/Winhance/issues"));
+                new Uri("https://github.com/ephemeral8997/winhance/issues"));
         }
         catch (Exception ex)
         {

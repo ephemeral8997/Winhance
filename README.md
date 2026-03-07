@@ -24,7 +24,7 @@ irm "https://get.winhance.net" | iex
 ### Download the Installer
 
 [![Download from Winhance.net](https://img.shields.io/badge/Download-Winhance.net-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://winhance.net)
-[![Download from GitHub Releases](https://img.shields.io/badge/Download-GitHub%20Releases-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/memstechtips/Winhance/releases)
+[![Download from GitHub Releases](https://img.shields.io/badge/Download-GitHub%20Releases-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ephemeral8997/winhance/releases)
 
 The `Winhance.Installer.exe` includes both Installable and Portable versions during setup.
 
@@ -90,5 +90,5 @@ Except where otherwise stated (see [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES
 
 If you have feedback, suggestions, or need help with Winhance, please join the discussion on GitHub or our Discord community:
 
-[![Join the Discussion](https://img.shields.io/badge/Join-the%20Discussion-2D9F2D?style=for-the-badge&logo=github&logoColor=white)](https://github.com/memstechtips/Winhance/discussions/183)
+[![Join the Discussion](https://img.shields.io/badge/Join-the%20Discussion-2D9F2D?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ephemeral8997/winhance/discussions/183)
 [![Join Discord Community](https://img.shields.io/badge/Join-Discord%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://www.discord.gg/zWGANV8QAX)

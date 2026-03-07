@@ -26,7 +26,7 @@ function Test-GitHubCLI {
 # Function to close multiple GitHub issues
 function Close-GitHubIssues {
     param (
-        [string]$Repository = "memstechtips/Winhance"
+        [string]$Repository = "ephemeral8997/winhance"
     )
 
     Clear-Host
@@ -97,7 +97,7 @@ function Close-GitHubIssues {
 # Function to create a GitHub release
 function New-GitHubRelease {
     param (
-        [string]$Repository = "memstechtips/Winhance"
+        [string]$Repository = "ephemeral8997/winhance"
     )
     
     Clear-Host

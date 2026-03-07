@@ -35,7 +35,7 @@ function Get-FileFromWeb {
 }
 
 $installerPath = "C:\ProgramData\Winhance\Unattend\WinhanceInstaller.exe"
-$downloadUrl = "https://github.com/memstechtips/Winhance/releases/latest/download/Winhance.Installer.exe"
+$downloadUrl = "https://github.com/ephemeral8997/winhance/releases/latest/download/Winhance.Installer.exe"
 
 try {
     Write-Host "Downloading Winhance Installer from GitHub..." -ForegroundColor Cyan
