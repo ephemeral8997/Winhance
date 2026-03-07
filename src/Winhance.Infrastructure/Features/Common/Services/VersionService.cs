@@ -17,8 +17,6 @@ using Winhance.Core.Features.Common.Enums;
 using Winhance.Core.Features.Common.Interfaces;
 
 using Winhance.Core.Features.Common.Models;
-ephemeral8997/winhance
-ephemeral8997/winhance
 
 namespace Winhance.Infrastructure.Features.Common.Services;
 
