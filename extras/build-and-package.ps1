@@ -200,14 +200,6 @@ if (-not (Test-Path $OutputDir)) {
     New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
 }
 
-# Check for prerequisite installer files
-if (-not (Test-Path $dotNetRuntimePath)) {
-    Write-Host ".NET 10 Desktop Runtime installer not found at: $dotNetRuntimePath" -ForegroundColor Red
-    Write-Host "Download from: https://dotnet.microsoft.com/download/dotnet/10.0" -ForegroundColor Yellow
-    exit 1
-}
-Write-Host "Building Winhance v$Version..." -ForegroundColor Cyan
-
 # Modify version if Beta flag is set
 if ($Beta) {
     # For NuGet compatibility, use proper SemVer format with prerelease tag
@@ -251,7 +243,8 @@ if (-not $msbuildPath -or -not (Test-Path $msbuildPath)) {
     $fallbackPaths = @(
         "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe",
         "C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe",
-        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe",
+        "C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\\MSBuild\Current\Bin\amd64\MSBuild.exe"
     )
     foreach ($path in $fallbackPaths) {
         if (Test-Path $path) {
@@ -267,14 +260,6 @@ if (-not $msbuildPath -or -not (Test-Path $msbuildPath)) {
 }
 
 Write-Host "Using MSBuild: $msbuildPath" -ForegroundColor Green
-
-# Step 0: Update bundled WinGet CLI and VC++ Runtime DLLs
-Write-Host "Updating bundled WinGet and VC++ Runtime DLLs..." -ForegroundColor Green
-& "$scriptRoot\Update-BundledWinGet.ps1"
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "Failed to update bundled WinGet" -ForegroundColor Red
-    exit 1
-}
 
 # Step 1: Clean the solution
 Write-Host "Cleaning solution..." -ForegroundColor Green
@@ -371,7 +356,7 @@ Set-Content -Path $tempInnoScript -Value $innoContent
 
 # Step 6: Run the InnoSetup compiler
 Write-Host "Creating installer..." -ForegroundColor Green
-$innoCompiler = "C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+$innoCompiler = "C:\Users\Mazen Ahmed\Tools\Inno Setup 6\ISCC.exe"
 if (-not (Test-Path $innoCompiler)) {
     Write-Host "InnoSetup compiler not found at $innoCompiler" -ForegroundColor Yellow
     $innoCompiler = "C:\Program Files\Inno Setup 6\ISCC.exe"
