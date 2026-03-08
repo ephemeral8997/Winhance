@@ -1171,7 +1171,7 @@
             "Id": "gaming-sysmain-service",
             "Name": "SysMain Service (Superfetch)",
             "InputType": 1,
-            "SelectedIndex": 0
+            "SelectedIndex": 1
           },
           {
             "Id": "gaming-performance-prefetch",

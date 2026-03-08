@@ -683,8 +683,8 @@ public static class GamingAndPerformanceOptimizations
                 new SettingDefinition
                 {
                     Id = "gaming-sysmain-service",
-                    Name = "SysMain Service (Superfetch)",
-                    Description = "Preload frequently used applications into RAM for faster launch times. Automatic is recommended for HDDs, Manual or Disabled is preferred for SSDs",
+                    Name = "SysMain (Memory Management)",
+                    Description = "Manages app preloading and RAM compression. Automatic is best for HDDs or low RAM (<16GB). Manual/Disabled is preferred for high-end SSD systems to reduce background CPU spikes.",
                     GroupName = "System Services",
                     Icon = "Cached",
                     InputType = InputType.Selection,
@@ -693,9 +693,9 @@ public static class GamingAndPerformanceOptimizations
                     {
                         DisplayNames = new string[]
                         {
-                            "Disabled (Recommended for SSD)",
-                            "Manual",
-                            "Automatic (Recommended for HDD)",
+                            "Disabled (Gaming Mode - 16GB+ RAM Only)",
+                            "Manual (Balanced - Recommended for SSD)",
+                            "Automatic (Standard - Best for HDD/Low RAM)",
                         },
                         ValueMappings = new Dictionary<int, Dictionary<string, object?>>
                         {
@@ -710,7 +710,7 @@ public static class GamingAndPerformanceOptimizations
                         {
                             KeyPath = @"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain",
                             ValueName = "Start",
-                            RecommendedValue = 4,
+                            RecommendedValue = 3, 
                             ValueType = RegistryValueKind.DWord,
                         },
                     },
